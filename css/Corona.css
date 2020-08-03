@@ -1,3 +1,4 @@
+
 html{
 	scroll-behavior: smooth;
 }
@@ -24,7 +25,7 @@ h1{
 	background-size: cover;
 	color: rgba(255, 255, 255, 1.0);
 	border: 3px solid #248f24;
-	border-radius: 10px;
+	border-radius: 15px;
 	padding: 10%;
 }
 h2{
@@ -38,7 +39,7 @@ h2{
 	top: 0px;
 	left: -200px;
 	width: 200px;
-	height: 442px;
+	height: 575px;
 	background: rgba(51, 255, 51, 0.8);
 	border-top: 3px solid #fff000;
 	border-right: 3px solid #fff000;
@@ -132,12 +133,23 @@ section p{
 	margin-bottom: 10px;
 	display: flex;
 	justify-content: center;
+	width: 100%;
 }
-.block{
-	width: 250px;
+.block, .block-2, .block-3{
+	width: 100%;
 	height: 300px;
 	border-radius: 5%;
 	background: #000000;
+}
+.block-2{
+	width: 100%;
+	height: 250px;
+	border-radius: 15px; 
+}
+.block-3{
+	width: 100%;
+	height: 350px;
+	border-radius: 15px;
 }
 .card{
 	width: 100%;
@@ -146,7 +158,7 @@ section p{
 	transition: transform 1s ease-in-out;
 	transform-style: preserve-3d;
 }
-.block:hover .card{
+.block:hover .card, .block-2:hover .card, .block-3:hover .card{
 	transform: rotateY(180deg);
 }
 .card figure{
@@ -154,45 +166,213 @@ section p{
 	height: 100%;
 	position: absolute;
 	margin: 0;
+	padding: 10px;
 }
-.front{
+.front, .front-2, .front-3{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
-	background: #00e600;
+	background: #660033;
 	border-radius: 5%;
-	color: #00134d;
+	color: #ffd700;
 	padding: 5px;
 }
-.back{
+.back, .back-2, .back-3{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
 	border-radius: 5%;	
-	background: #00134d;
-	color: #00e600;
+	background: #ffd700;
+	color: #660033;
 	padding: 5px;
 	transform: rotateY(180deg);
 }
-/*Media queries*/
-@media(max-width: 575px){
-	
+.front-2{
+	background: #493829;
+	color: #d57500;
+	font-weight: 600;
+}
+.back-2{	
+	background: #d57500; #0000ff  #00ffff
+	color: #493829;
+	font-weight: 600;
+}
+.front-3{
+	background: #ffffff;
+	color: #000000;
+	border-radius: 15px;
+	padding: 10px;
+}
+.back-3{	
+	background: #29293d;
+	color: #ffffff;
+	border-radius: 15px;
+	padding: 10px;
+}
+.fast{
+	font-size: 23px;
+	font-weight: 700;
+	color: #fff000;
+}
+h3 span{
+	color: #fff000;
+}
+.front-para{
+	font-size: 23px;
+	font-weight: 600;
+}
+#call-myths div figure img{
+	width: 70%;
+	height: 60%;
+	display: block;
+	margin: 5px auto;
 }
 
-@media (min-width: 576px) and (max-wdith: 767px) {
+#call-measures figure li{
+	margin: 5px 0;
+}
+#call-measures figure li a{
+	text-decoration: none;
+	color: #660033;
+}
+footer{
+	margin: 10px auto;
+	paddding: 5px;
+	background-image: linear-gradient(to right, #000000 , #666699);
+}
+footer section{
+	text-align: center;
+}
+footer h3{
+	text-align: center;
+	text-decoration: underline;
+	text-decoration-color: #ffd700;
+}
+.bold{
+	color: red;
+}
+.bold-1{
+	background: #000000;
+}
+.back span, .back-2 span, .back-3 span{
+	background: #ffffff;
+}
+/*Media queries*/
+@media(max-width: 575px){
+	.block-3{
+		height: 650px;
+	}
+	#call-symptoms{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#call-myths div figure img{
+		width: 70%;
+		height: 70%;
+		display: block;
+		margin: 5px auto;
+	}
+	#call-causes div.block{
+		height: 240px;
+	}
+}
+@media(max-width: 392px){
+	.block-3{
+	height: 780px;
+	}
+	.block-2{
+	width: 100%;
+	height: 320px;
+	border-radius: 15px; 
+	}
+	#call-myths div.block{
+	height: 375px;
+	}
+	#call-measures div.block-2{
+	height: 332px;
+	}
+}
+@media(min-width: 393px) and (max-width: 575px){
+	.block, .block-2, .block-3{
+		width: 98%;
+	}
+	#call-measures div.block-2{
+		height: 300px;
+	}
+	#call-causes div.block{
+		height: 255px;
+	}
+	#call-myths div.block{
+		height: 350px;
+	}
+}
 
+@media (min-width: 576px) and (max-width: 767px) {
+	#call-effects div.block{
+		height: 325px;
+	}
+	.block-3{
+		height: 500px;
+	}
+	.block{
+		height: 325px;
+	}
+	#call-myths div.block{
+		height: 375px;
+	}
+	.block-2{
+	width: 100%;
+	height: 350px;
+	border-radius: 15px; 
+	}
+	#call-measures div.block-2{
+		height: 390px;
+	}
+	#call-causes div.block{
+		height: 335px;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px){
-
+	.block-3{
+		height: 420px;
+	}
+	.block-2{
+		height: 265px;
+	}
+	#call-myths div.block{
+		height: 400px;
+	}
+	#call-causes div.block{
+		height: 275px;
+	}
+	#call-measures div.block-2{
+		height: 325px;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
-
+	#call-causes div.block{
+		height: 360px;
+	}
+	.block-3{
+		height: 400px;
+	}
+	#call-causes div.block{
+		height: 375px;
+	}
+	#call-effects div.block-2{
+		height: 240px;
+	}
 }
 
 @media (min-width: 1200px) {
-
+	#call-effects div.block-2{
+		height: 220px;
+	}
+	#call-causes div.block{
+		height: 340px;
+	}
 }
