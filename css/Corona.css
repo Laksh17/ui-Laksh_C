@@ -259,6 +259,9 @@ footer h3{
 .back span, .back-2 span, .back-3 span{
 	background: #ffffff;
 }
+#call-symptoms figure span{
+	background: none;
+}
 /*Media queries*/
 @media(max-width: 575px){
 	.block-3{
