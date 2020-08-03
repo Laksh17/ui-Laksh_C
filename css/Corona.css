@@ -15,7 +15,7 @@ body {
 	text-decoration: none;
 }
 h1{
-	font-family: 'B612';
+
 	font-size: 60px;
 	text-shadow: 0 0 5px #ff6600,0 0 5px #ff0000;
 	text-align: center;
@@ -280,6 +280,9 @@ footer h3{
 	#call-causes div.block{
 		height: 240px;
 	}
+	h1{
+		padding: 15% 15% 35% 35%;
+	}
 }
 @media(max-width: 392px){
 	.block-3{
@@ -296,6 +299,9 @@ footer h3{
 	#call-measures div.block-2{
 	height: 332px;
 	}
+	h1{
+		font-size: 35px;
+	}
 }
 @media(min-width: 393px) and (max-width: 575px){
 	.block, .block-2, .block-3{
@@ -309,6 +315,9 @@ footer h3{
 	}
 	#call-myths div.block{
 		height: 350px;
+	}
+	h1{
+		font-size: 45px;
 	}
 }
 
